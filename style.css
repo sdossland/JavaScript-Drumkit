@@ -1,0 +1,47 @@
+body {
+    /*background-image: url("");*/
+    background-color: gray;
+    text-transform: uppercase;
+    font-family: "Times New Roman", Georgia, Serif;
+}
+#selector {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.key {
+    height: 70px;
+    width: 70px;
+    border: 2px solid #000;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 0 8px 0 8px;
+    transition: all .07s;
+    background: rgba(0,0,0,0.4);
+}
+.letter {
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    height: 40px;
+    width: 100%;
+    padding-top: 15px;
+}
+.sound {
+    color: #ffc600;
+    font-size: 10px;
+    text-align: center;
+    display: block;
+    height: 30px;
+    width: 100%;
+    padding-top: 5px;
+}
+.playing {
+    transform: scale(1.2);
+    border-color: #ffc600;
+    box-shadow: 0 0 10px #ffc600;
+}
