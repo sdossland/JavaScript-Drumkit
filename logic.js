@@ -6,8 +6,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
     if (!audio) return; //if invalid key is selected, return null
-    audio.currentTime = 0; //rewinds sound immediately to allow for repetition
-    audio.play();
+    //only play half a second of audio
+    setTimeout(function(){
+      audio.play();
+      console.log('test');
+      setTimeout(function(){
+        audio.pause();
+        audio.currentTime = 0;
+      }, 500);
+    }, 10);
+
     key.classList.add('playing');
   }
 
