@@ -1,8 +1,8 @@
 body {
-    /*background-image: url("");*/
-    background-color: gray;
+    background-image: url("./cityscape.jpg"); /*this is a relative URL, not absolute (i.e. https://facebook.com)*/
     text-transform: uppercase;
-    font-family: "Times New Roman", Georgia, Serif;
+    font-family: "Times New Roman", "Georgia", "Serif";
+    background-size: 100%;
 }
 #selector {
     position: absolute;
@@ -18,8 +18,8 @@ body {
     border-radius: 2px;
     display: inline-block;
     margin: 0 8px 0 8px;
-    transition: all .07s;
-    background: rgba(0,0,0,0.4);
+    transition: all .20s;
+    background: rgba(0,0,0,0.6);
 }
 .letter {
     color: #fff;
