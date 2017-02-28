@@ -9,10 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
     //only play half a second of audio
     setTimeout(function(){
       audio.play();
-      console.log('test');
       setTimeout(function(){
-        audio.pause();
-        audio.currentTime = 0;
+        audio.pause(); //stops audio
+        audio.currentTime = 0; //restarts audio file
       }, 500);
     }, 10);
 
@@ -27,7 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener('keydown', playAudio);
 
   const keys = document.querySelectorAll('.key');
-//must loop through all of the elements, cannot listen to a whole list
+  
+  //must loop through all of the elements, cannot listen to a whole list
   keys.forEach(function (key) {
     key.addEventListener('transitionend', removeTransition);
   });
